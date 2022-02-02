@@ -26,10 +26,10 @@ public class Restaurante {
     @Column(name = "taxa_frete", nullable = false)
     private BigDecimal taxaFrete;
 
-    private Boolean ativo;
-    private Boolean aberto;
-    private Date dataCadastro;
-    private Date dataAtualizacao;
+   // private Boolean ativo;
+   // private Boolean aberto;
+   // private Date dataCadastro;
+   // private Date dataAtualizacao;
 
     @ManyToOne
     @JoinColumn(nullable = false)
