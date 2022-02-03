@@ -1,11 +1,15 @@
 package com.venicios.delivery.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.DateTimeException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -30,8 +34,24 @@ public class Restaurante {
    // private Boolean aberto;
    // private Date dataCadastro;
    // private Date dataAtualizacao;
+     @Column(nullable = false)
+     private LocalDateTime dataCadastro;
+
+    @Column(nullable = false)
+     private LocalDateTime dataAtualizacao;
 
     @ManyToOne
     @JoinColumn(nullable = false)
     private Cozinha cozinha;
+
+    @JsonIgnore
+    @Embedded
+    private Endereco endereco;
+
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(name = "restaurante_forma_pagamento",
+               joinColumns = @JoinColumn(name= "restaurante_id"),
+               inverseJoinColumns = @JoinColumn(name ="forma_pagamento_id"))
+    private List<FormaPagamento> formasPagamento = new ArrayList<>();
 }
