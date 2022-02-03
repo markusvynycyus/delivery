@@ -6,28 +6,27 @@ import lombok.*;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Entity
-@Getter
-@Setter
-@Table(name = "produto")
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
 public class Produto {
 
-    @Id
     @EqualsAndHashCode.Include
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
 
+    @Column(nullable = false)
     private String nome;
 
+    @Column(nullable = false)
     private String descricao;
 
+    @Column(nullable = false)
     private BigDecimal preco;
 
-    private Boolean ativo;
+    @Column(nullable = false)
+    private Integer ativo;
 
     @ManyToOne
     @JoinColumn(nullable = false)
