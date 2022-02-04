@@ -1,6 +1,7 @@
 package com.venicios.delivery.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class Produto {
     @Column(nullable = false)
     private Integer ativo;
 
+    //@JsonIgnore
     @ManyToOne
     @JoinColumn(nullable = false)
     private Restaurante restaurante;
