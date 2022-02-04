@@ -1,4 +1,4 @@
-package com.venicios.delivery.model;
+package com.venicios.delivery.domain.model;
 
 import lombok.*;
 

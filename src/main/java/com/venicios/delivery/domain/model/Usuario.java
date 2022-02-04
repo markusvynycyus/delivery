@@ -1,4 +1,4 @@
-package com.venicios.delivery.model;
+package com.venicios.delivery.domain.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Permissao {
+public class Usuario {
 
     @EqualsAndHashCode.Include
     @Id
@@ -19,6 +19,9 @@ public class Permissao {
     private String nome;
 
     @Column(nullable = false)
-    private String descricao;
+    private String email;
+
+    @Column(nullable = false)
+    private String senha;
 
 }

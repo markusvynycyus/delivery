@@ -1,6 +1,6 @@
-package com.venicios.delivery.repository;
+package com.venicios.delivery.domain.repository;
 
-import com.venicios.delivery.model.Restaurante;
+import com.venicios.delivery.domain.model.Restaurante;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 

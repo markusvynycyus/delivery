@@ -1,7 +1,6 @@
-package com.venicios.delivery.model;
+package com.venicios.delivery.domain.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
