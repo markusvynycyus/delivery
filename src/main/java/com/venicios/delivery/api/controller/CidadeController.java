@@ -1,5 +1,6 @@
 package com.venicios.delivery.api.controller;
 
+import com.venicios.delivery.domain.model.Restaurante;
 import com.venicios.delivery.domain.repository.CidadeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,9 @@ public class CidadeController {
 
     }
 
-
+    @GetMapping("/por-nome")
+    public List<Cidade> ciadadesPorNome(String nome, Long estadoId) {
+        return cidadeRepository.consultarPorCidadeNome (nome, estadoId);
+    }
 
 }
