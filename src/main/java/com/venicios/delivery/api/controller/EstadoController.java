@@ -1,8 +1,8 @@
-package com.venicios.delivery.controller;
+package com.venicios.delivery.api.controller;
 
 
-import com.venicios.delivery.repository.EstadoRepository;
-import com.venicios.delivery.model.Estado;
+import com.venicios.delivery.domain.repository.EstadoRepository;
+import com.venicios.delivery.domain.model.Estado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

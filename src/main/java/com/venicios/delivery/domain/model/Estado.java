@@ -1,4 +1,4 @@
-package com.venicios.delivery.model;
+package com.venicios.delivery.domain.model;
 
 import lombok.*;
 
@@ -7,11 +7,11 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name = "cidade")
+@Table(name = "estado")
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Cidade {
+public class Estado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +20,4 @@ public class Cidade {
 
     @Column(nullable = false)
     private String nome;
-
-    @ManyToOne
-    @JoinColumn(nullable = false)
-    private Estado estado;
 }

@@ -1,7 +1,7 @@
-package com.venicios.delivery.controller;
+package com.venicios.delivery.api.controller;
 
-import com.venicios.delivery.repository.CozinhaRepository;
-import com.venicios.delivery.model.Cozinha;
+import com.venicios.delivery.domain.repository.CozinhaRepository;
+import com.venicios.delivery.domain.model.Cozinha;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

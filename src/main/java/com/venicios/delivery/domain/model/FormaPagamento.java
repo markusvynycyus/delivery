@@ -1,16 +1,12 @@
-package com.venicios.delivery.model;
+package com.venicios.delivery.domain.model;
 
 import lombok.*;
 
 import javax.persistence.*;
 
-@Entity
-@Getter
-@Setter
-@Table(name = "formapagamento")
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
 public class FormaPagamento {
 
     @EqualsAndHashCode.Include

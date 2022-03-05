@@ -1,6 +1,5 @@
-package com.venicios.delivery.model;
+package com.venicios.delivery.domain.model;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import lombok.*;
 
 import javax.persistence.*;
@@ -8,11 +7,11 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name = "estado")
+@Table(name = "cidade")
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Estado {
+public class Cidade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +20,8 @@ public class Estado {
 
     @Column(nullable = false)
     private String nome;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Estado estado;
 }
